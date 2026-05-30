@@ -31,6 +31,33 @@ After extraction, restart your shell:
 exec bash
 ```
 
+### Configure Environment (Optional)
+
+Add the Android NDK tools to your shell environment:
+
+```bash
+export ANDROID_NDK_HOME="$HOME/android-sdk/ndk/25.2.9519653"
+export ANDROID_NDK_ROOT="$ANDROID_NDK_HOME"
+
+export PATH="$ANDROID_NDK_HOME:$PATH"
+```
+
+Reload your shell:
+
+```bash
+source ~/.bashrc
+```
+
+Verify:
+
+```bash
+ndk-build --version
+```
+
+> Note:
+> If you need direct access to LLVM tools such as `clang`, `clang++`, or `llvm-ar`,
+> add `toolchains/llvm/prebuilt/linux-x86_64/bin` to your `PATH`.
+
 ### Included Components
 
 - Android NDK
